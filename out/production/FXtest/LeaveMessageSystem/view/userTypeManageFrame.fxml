@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.geometry.Insets?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="LeaveMessageSystem.controller.UserTypeManageFrameController"
+            prefHeight="700.0" prefWidth="800.0">
+    <children>
+        <VBox alignment="CENTER" prefHeight="700.0" prefWidth="800.0">
+            <children>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <Label text="用户注册管理">
+                            <font>
+                                <Font name="System Bold" size="40.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="296.0" prefWidth="600.0">
+                    <children>
+                        <TableView fx:id="UserTypeManageView" prefWidth="605.0" prefHeight="399.0" tableMenuButtonVisible="true">
+                            <columns>
+                                <TableColumn fx:id="idTableColumn" prefWidth="197.0" text="编号"/>
+                                <TableColumn fx:id="userTypeNameColumn" minWidth="0.0" prefWidth="201.0" text="用户昵称"/>
+                                <TableColumn fx:id="userTypeStatus" prefWidth="201.0" text="用户状态"/>
+                            </columns>
+                        </TableView>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="263.0" prefWidth="600.0">
+                    <children>
+                        <VBox fx:id="formVbox" prefHeight="240.0" prefWidth="602.0">
+                            <children>
+                                <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                                    <children>
+                                        <Label text="编号："/>
+                                        <TextField fx:id="idTextField" prefHeight="30.0" prefWidth="165.0"/>
+                                        <Label text="用户昵称："/>
+                                        <TextField fx:id="userTypeNameField" prefHeight="30.0" prefWidth="174.0" />
+                                    </children>
+                                    <padding>
+                                        <Insets left="40.0"/>
+                                    </padding>
+                                </HBox>
+                                <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                                    <children>
+                                        <Label text="用户状态：" />
+                                        <TextField fx:id="userTypeStatusField" prefHeight="80.0" prefWidth="165.0" />
+                                    </children>
+                                    <padding>
+                                        <Insets left="40.0"/>
+                                    </padding>
+                                </HBox>
+                                <HBox alignment="CENTER" prefWidth="100.0" prefHeight="200.0" spacing="100.0">
+                                    <children>
+                                        <Button fx:id="alterButton" mnemonicParsing="false" onAction="#do_alterButtom_event" text="修改"/>
+                                    </children>
+                                    <padding>
+                                        <Insets left="40.0"/>
+                                    </padding>
+                                </HBox>
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

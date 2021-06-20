@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<AnchorPane prefHeight="750.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="LeaveMessageSystem.controller.AddMessageFrameController">
+    <children>
+        <VBox alignment="CENTER" focusTraversable="true" layoutX="137.0" prefHeight="400.0" prefWidth="326.0"
+              spacing="20.0">
+            <children>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <Label fx:id="descriptionLabel" text="留言添加"/>
+                    </children>
+                </HBox>
+
+                <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <Label text="标题："/>
+                        <TextField fx:id="titleTextField" prefHeight="30.0" prefWidth="240.0" promptText="请填入标题："/>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <Label text="内容："/>
+                        <TextArea fx:id="contentTextField" prefHeight="200.0" prefWidth="240.0" promptText="请填入留言内容："/>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <Label text="日期："/>
+                        <DatePicker fx:id="datePickerTextField" prefHeight="30.0" prefWidth="240.0"
+                                    promptText="请选择日期："/>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="80.0">
+                    <children>
+                        <Button fx:id="addButton" mnemonicParsing="false" onAction="#addButtonEvent" text="添加"/>
+                        <Button fx:id="resetButton" mnemonicParsing="false" onAction="#resetButtonEvent" text="重置"/>
+                    </children>
+                </HBox>
+            </children>
+            <opaqueInsets>
+                <Insets/>
+            </opaqueInsets>
+            <padding>
+                <Insets bottom="20.0"/>
+            </padding>
+        </VBox>
+    </children>
+</AnchorPane>

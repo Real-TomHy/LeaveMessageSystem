@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.geometry.Insets?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="LeaveMessageSystem.controller.OrdinaryUserMessageManageFrameController"
+            prefHeight="700.0" prefWidth="800.0">
+    <children>
+        <VBox alignment="CENTER" prefHeight="700.0" prefWidth="800.0">
+            <children>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <Label text="普通用户留言管理">
+                            <font>
+                                <Font name="System Bold" size="40.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="296.0" prefWidth="700.0">
+                    <children>
+                        <TableView fx:id="MessageTypeManageView" prefWidth="705.0" prefHeight="399.0" tableMenuButtonVisible="true">
+                            <columns>
+                                <TableColumn fx:id="messageIdColumn" prefWidth="50.0" text="编号"/>
+                                <TableColumn fx:id="messageNameColumn" minWidth="0.0" prefWidth="100.0" text="用户昵称"/>
+                                <TableColumn fx:id="messageTitleColumn" prefWidth="228.0" text="标题"/>
+                                <TableColumn fx:id="messageContentColumn" prefWidth="220.0" text="内容"/>
+                                <TableColumn fx:id="messageTimeColumn" prefWidth="101.0" text="留言时间"/>
+                            </columns>
+                        </TableView>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="263.0" prefWidth="700.0">
+                    <children>
+                        <VBox fx:id="formVbox" prefHeight="240.0" prefWidth="702.0">
+                            <children>
+                                <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                                    <children>
+                                        <Label text="编号："/>
+                                        <TextField fx:id="messageIdField" prefHeight="30.0" prefWidth="50.0"/>
+                                        <Label text="用户昵称："/>
+                                        <TextField fx:id="messageNameField" prefHeight="30.0" prefWidth="150.0"/>
+                                        <Label text="留言时间"/>
+                                        <TextField fx:id="messageTimeField" prefHeight="30.0" prefWidth="200.0"/>
+                                    </children>
+                                    <padding>
+                                        <Insets left="40.0"/>
+                                        <Insets bottom="20.0"/>
+                                    </padding>
+                                </HBox>
+                                <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                                    <children>
+                                        <Label text="标题：" />
+                                        <TextField fx:id="messageTitleField" prefHeight="30.0" prefWidth="265.0" />
+                                    </children>
+                                    <padding>
+                                        <Insets left="40.0"/>
+                                        <Insets bottom="20.0"/>
+                                    </padding>
+                                </HBox>
+                                <HBox prefHeight="260.0" prefWidth="500.0" spacing="10.0">
+                                    <children>
+                                        <Label text="内容："/>
+                                        <TextField fx:id="messageContentField" prefHeight="250.0" prefWidth="400.0"/>
+                                    </children>
+                                    <padding>
+                                        <Insets left="40.0"/>
+                                        <Insets bottom="20.0"/>
+                                    </padding>
+                                </HBox>
+                                <HBox alignment="CENTER" prefWidth="100.0" prefHeight="200.0" spacing="100.0">
+                                    <children>
+                                        <Button fx:id="alterButton" mnemonicParsing="false" onAction="#do_alterButtom_event" text="修改"/>
+                                        <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#do_deleteButtom_event" text="删除"/>
+                                    </children>
+                                    <padding>
+                                        <Insets left="40.0"/>
+                                    </padding>
+                                </HBox>
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+
+</AnchorPane>

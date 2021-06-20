@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LeaveMessageSystem.controller.LogupFrameController">
+    <children>
+        <VBox prefHeight="393.0" prefWidth="600.0">
+            <children>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <Label fx:id="systemLabel" text="留言管理系统">
+                            <font>
+                                <Font name="System Bold" size="40.0" />
+                            </font>
+                        </Label>
+                    </children>
+                   <children>
+                       <HBox alignment="BASELINE_RIGHT">
+                          <children>
+                              <Button fx:id="touristButton"  mnemonicParsing="false" onAction="#touristButtonEvent" style="-fx-background-color: #00ffff;" text="游客登录" />
+                          </children>
+                       </HBox>
+                   </children>
+               <VBox.margin>
+                  <Insets left="40.0" />
+               </VBox.margin>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <Label fx:id="userNameLabel" text="用户名：" />
+                        <TextField fx:id="userNameTextField" promptText="请输入您的账号" />
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <Label fx:id="passwordLabel" text="密   码：" />
+                        <PasswordField fx:id="passwordTextField" promptText="请输入您的密码" />
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="80.0">
+                    <children>
+                        <Button fx:id="logupButton" mnemonicParsing="false" onAction="#logupButtonEvent" text=" 登 录" />
+                        <Button fx:id="resetButton" mnemonicParsing="false" onAction="#resetButtonEvent" text=" 重 置" />
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

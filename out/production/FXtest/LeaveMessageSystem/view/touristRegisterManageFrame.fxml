@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane prefHeight="700.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LeaveMessageSystem.controller.TouristRegisterManageFrameController">
+    <children>
+        <VBox alignment="CENTER" prefHeight="700.0" prefWidth="800.0">
+            <children>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <Label text="用户注册">
+                            <font>
+                                <Font name="System Bold" size="40.0" />
+                            </font>
+                        </Label>
+                    </children>
+                    <padding>
+
+                        <Insets bottom="120.0" />
+                    </padding>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="700.0">
+                    <children>
+                        <VBox fx:id="formVbox" prefHeight="240.0" prefWidth="502.0">
+                            <children>
+                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                                    <children>
+                                        <Label text="用户昵称:" />
+                                        <TextField fx:id="tNameField" prefHeight="30.0" prefWidth="150.0" />
+                                    </children>
+                                    <padding>
+                                        <Insets left="40.0" />
+                                        <Insets bottom="20.0" />
+                                    </padding>
+                                </HBox>
+                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                                    <children>
+                                        <Label text="密码:" />
+                                        <PasswordField fx:id="tPasswordField" prefHeight="30.0" prefWidth="184.0" />
+                                    </children>
+                                    <padding>
+                                        <Insets left="78.0" />
+                                        <Insets bottom="20.0" />
+                                    </padding>
+                                </HBox>
+                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                                    <children>
+                                        <Label text="确认密码:" />
+                                        <PasswordField fx:id="tPasswordCkField" prefHeight="30.0" prefWidth="154.0" />
+                                    </children>
+                                    <padding>
+                                        <Insets left="40.0" />
+                                        <Insets bottom="20.0" />
+                                    </padding>
+                                </HBox>
+                                <HBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="100.0">
+                                    <children>
+                                        <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#do_deleteButtom_event" text="注册" />
+                                        <Button fx:id="resetButton" mnemonicParsing="false" onAction="#resetButtonEvent" text="重置" />
+                                    </children>
+                                    <padding>
+                                        <Insets left="40.0" />
+                                    </padding>
+                                </HBox>
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

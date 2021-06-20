@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+        <?import javafx.scene.control.*?>
+        <?import javafx.scene.image.ImageView?>
+        <?import javafx.scene.layout.AnchorPane?>
+        <?import javafx.scene.layout.HBox?>
+<AnchorPane prefHeight="750.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+        fx:controller="LeaveMessageSystem.controller.MainFrameController">
+        <children>
+            <MenuBar prefHeight="37.0" prefWidth="800.0">
+                <menus>
+                    <Menu mnemonicParsing="false" text="用户管理">
+                        <items>
+                            <MenuItem fx:id="UserMenuItem_event" mnemonicParsing="false" onAction="#do_UserMenuItem_event" text="用户维护"/>
+                        </items>
+                    </Menu>
+                    <Menu mnemonicParsing="false" text="留言管理">
+                        <items>
+                            <MenuItem fx:id="MessageBrowserMenuItem" mnemonicParsing="false" onAction="#do_MessageBrowserMenuItem_event" text="留言查看与维护"/>
+                        </items>
+                    </Menu>
+                    <Menu mnemonicParsing="false" text="其他">
+                        <items>
+                            <MenuItem fx:id="exitMenuItem" mnemonicParsing="false" onAction="#do_exitMenuItem_vent" text="退出"/>
+                            <MenuItem fx:id="aboutSoftMenuItem" mnemonicParsing="false" onAction="#do_aboutSoftMenuItem_event" text="关于软件"/>
+                        </items>
+                    </Menu>
+                </menus>
+            </MenuBar>
+            <AnchorPane fx:id="mainFrameAnchorPane" layoutY="37.0" prefHeight="663.0" prefWidth="800.0">
+                <children>
+                    <HBox alignment="CENTER" prefHeight="663.0" prefWidth="800.0">
+                        <children>
+                            <ImageView fx:id="mainAdminImageView" fitHeight="513.0" fitWidth="611.0" pickOnBounds="true" preserveRatio="true">
+                                <image>
+                                </image>
+                            </ImageView>
+                        </children>
+                    </HBox>
+                </children>
+            </AnchorPane>
+        </children>
+</AnchorPane>
